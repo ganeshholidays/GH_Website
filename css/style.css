@@ -540,10 +540,32 @@ img {
 }
 
 .package-price {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--gold-dark);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-600);
     margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.package-price i {
+    color: var(--gold);
+    margin-right: 5px;
+}
+
+.packages-note {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--gray-600);
+    background: white;
+    padding: 15px 25px;
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--gold);
+}
+
+.packages-note i {
+    color: var(--gold);
+    margin-right: 6px;
 }
 
 /* === WHY CHOOSE US === */
@@ -938,6 +960,16 @@ img {
 
     .nav-menu.active {
         right: 0;
+    }
+
+    .nav-menu .nav-link {
+        color: #1a365d;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .nav-menu .nav-link:hover {
+        color: #f6ad55;
     }
 
     .nav-hamburger {
