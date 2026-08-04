@@ -948,14 +948,16 @@ img {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 280px;
-        height: 100vh;
+        width: 220px;
+        height: auto;
+        max-height: 100vh;
         background: white;
         flex-direction: column;
-        padding: 80px 30px 30px;
-        gap: 20px;
+        padding: 70px 25px 30px;
+        gap: 18px;
         box-shadow: var(--shadow-lg);
         transition: right 0.3s ease;
+        border-radius: 0 0 0 16px;
     }
 
     .nav-menu.active {
@@ -978,6 +980,7 @@ img {
 
     .nav-hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
+        background: #1a365d;
     }
 
     .nav-hamburger.active span:nth-child(2) {
@@ -986,6 +989,7 @@ img {
 
     .nav-hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
+        background: #1a365d;
     }
 
     .about-grid {
