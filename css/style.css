@@ -949,7 +949,7 @@ img {
         top: 0;
         right: -100%;
         width: 220px;
-        height: auto;
+        height: 100vh;
         max-height: 100vh;
         background: white;
         flex-direction: column;
