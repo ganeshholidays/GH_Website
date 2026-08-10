@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', highlightNavLink);
 
     // === CONTACT FORM HANDLING ===
-    const contactForm = document.getElementById('contactForm');
+    const contactForm = document.getElementById('enquiryForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
