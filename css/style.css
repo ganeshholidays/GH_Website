@@ -555,17 +555,20 @@ img {
 .packages-note {
     text-align: center;
     margin-top: 30px;
-    font-size: 14px;
-    color: var(--gray-600);
-    background: white;
-    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--blue-dark);
+    background: #fef9e7;
+    padding: 18px 25px;
     border-radius: var(--radius-sm);
-    border-left: 3px solid var(--gold);
+    border: 1px solid #f6ad55;
+    border-left: 4px solid var(--gold);
 }
 
 .packages-note i {
     color: var(--gold);
-    margin-right: 6px;
+    margin-right: 8px;
+    font-size: 16px;
 }
 
 /* === WHY CHOOSE US === */
