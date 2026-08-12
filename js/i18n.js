@@ -153,11 +153,11 @@ const translations = {
         "review.form.destination": "Trip Destination",
         "review.form.rating": "Rate your experience",
         "review.form.feedback": "Your Experience",
-        "review.form.photo": "Upload a photo (with GTT car or at destination)",
+        "review.form.photo": "Upload a photo (with GH car or at destination)",
         "review.form.photoHint": "Optional • JPG/PNG • Max 5MB",
         "review.form.submit": "Submit Review",
         "review.form.note": "Your review will be published on our website after verification. Thank you!",
-        "review.back": "← Back to Ganesh Travels"
+        "review.back": "← Back to Ganesh Holidays"
     },
 
     ta: {
@@ -309,7 +309,7 @@ const translations = {
         "review.form.destination": "பயண இடம்",
         "review.form.rating": "உங்கள் அனுபவத்தை மதிப்பிடுங்கள்",
         "review.form.feedback": "உங்கள் அனுபவம்",
-        "review.form.photo": "புகைப்படம் பதிவேற்றுங்கள் (GTT கார் அல்லது சுற்றுலா இடத்தில்)",
+        "review.form.photo": "புகைப்படம் பதிவேற்றுங்கள் (GH கார் அல்லது சுற்றுலா இடத்தில்)",
         "review.form.photoHint": "விருப்பம் • JPG/PNG • அதிகபட்சம் 5MB",
         "review.form.submit": "மதிப்புரை சமர்ப்பிக்க",
         "review.form.note": "உங்கள் மதிப்புரை சரிபார்ப்புக்குப் பிறகு எங்கள் இணையதளத்தில் வெளியிடப்படும். நன்றி!",

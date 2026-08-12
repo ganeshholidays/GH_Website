@@ -197,3 +197,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+
+// === MOBILE AUTO-SCROLL CAROUSEL ===
+(function() {
+    if (window.innerWidth > 768) return; // Only on mobile
+
+    const carousels = document.querySelectorAll('.services-grid, .packages-grid, .whyus-grid, .gallery-grid');
+
+    carousels.forEach(carousel => {
+        let isPaused = false;
+        let resumeTimeout;
+        let scrollAmount = carousel.querySelector('.service-card, .package-card, .whyus-item, .gallery-item');
+        let itemWidth = scrollAmount ? scrollAmount.offsetWidth + 12 : 280;
+
+        function doScroll() {
+            if (isPaused) return;
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            if (carousel.scrollLeft >= maxScroll - 5) {
+                carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: itemWidth, behavior: 'smooth' });
+            }
+        }
+
+        // Auto-scroll every 1 second
+        let scrollInterval = setInterval(doScroll, 1500);
+
+        // Pause on tap (click)
+        carousel.addEventListener('click', () => {
+            isPaused = true;
+            clearTimeout(resumeTimeout);
+            resumeTimeout = setTimeout(() => { isPaused = false; }, 5000);
+        });
+
+        // Pause on manual horizontal scroll (touch drag)
+        let touchStartX = 0;
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            const touchDiffX = Math.abs(e.touches[0].clientX - touchStartX);
+            // Only pause if swiping horizontally (not vertical page scroll)
+            if (touchDiffX > 10) {
+                isPaused = true;
+                clearTimeout(resumeTimeout);
+                resumeTimeout = setTimeout(() => { isPaused = false; }, 5000);
+            }
+        });
+
+        // Resume when section scrolls out of view and comes back
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    isPaused = false;
+                } else {
+                    isPaused = true;
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(carousel);
+    });
+})();
